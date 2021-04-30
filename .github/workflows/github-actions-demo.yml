@@ -14,7 +14,7 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: 'Github Bot'
-          DISCORD_AVATAR : https://image.flaticon.com/icons/png/512/38/38401.png
+          DISCORD_AVATAR : https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
         uses: Ilshidur/action-discord@0.3.0
         with:
           args: 'The project {{ EVENT_PAYLOAD.repository.full_name }} has been test all green.'
