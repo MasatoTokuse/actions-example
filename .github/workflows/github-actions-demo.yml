@@ -16,7 +16,7 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: 'Github Bot'
           DISCORD_AVATAR : https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-          GITHUB_ACTIONS_URL : '${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/runs/${GITHUB_RUN_NUMBER}?check_suite_focus=true'
+          GITHUB_ACTIONS_URL : '${{env.GITHUB_SERVER_URL}}/${{env.GITHUB_REPOSITORY}}/runs/${{env.GITHUB_RUN_NUMBER}}?check_suite_focus=true'
         uses: Ilshidur/action-discord@0.3.0
         with:
           args: 'The project {{ EVENT_PAYLOAD.repository.full_name }} has been failed test. {{ GITHUB_ACTIONS_URL }}'
